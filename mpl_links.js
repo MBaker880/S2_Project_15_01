@@ -14,14 +14,14 @@
 /* ---------------------------------------------------------------------------------------------------------- */
 
 window.addEventListener("load", function () {
-    var allSelect = document.select.govLinks
+    var allSelect = document.forms.govLinks;
+
+    for (var i = 0; i < allSelect.length; i++) {
+        allSelect[i].onchange = function (e) {
+            document.location.href = e.target.value;
+        };
+    };
 });
-
-for (var i = 0; i <= allSelect.length; i++) {
-    allSelect[i].onchange = function () {
-
-    }
-}
 
 
 
